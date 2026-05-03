@@ -1,1 +1,63 @@
-<h1>My Project</h1> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Login Security System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Arduino Security Login</h1>
+        <p class="subtitle">
+            Interactive authentication system with Arduino LCD and LED indicators
+        </p>
+        <!-- Arduino Connection -->
+        <div class="connection-section">
+            <button id="connectBtn" class="connect-btn">
+                Connect Arduino
+            </button>
+        </div>
+        <!-- Login Form -->
+        <div class="login-box">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" autocomplete="off">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" autocomplete="off">
+            <button id="loginBtn" class="login-btn">
+                Login
+            </button>
+        </div>
+        <!-- System Status -->
+        <div class="status-box">
+            <p>
+                <strong>Connection Status:</strong>
+                <span id="connectionStatus">Not Connected</span>
+            </p>
+            <p>
+                <strong>System Status:</strong>
+                <span id="statusMessage">Waiting Login</span>
+            </p>
+            <p>
+                <strong>Remaining Attempts:</strong>
+                <span id="attempts">3</span>
+            </p>
+        </div>
+        <!-- Information Panel -->
+        <div class="info-box">
+            <h3>Login Credentials</h3>
+            <p>Username: <b>admin</b></p>
+            <p>Password: <b>1234</b></p>
+            <p class="note">
+                Only three incorrect attempts are allowed.
+                After the third failed attempt, the system will trigger an
+                <strong>Intruder Alarm</strong>.
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
